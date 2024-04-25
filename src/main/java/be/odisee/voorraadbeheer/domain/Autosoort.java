@@ -1,11 +1,28 @@
 package be.odisee.voorraadbeheer.domain;
 
+import jdk.jfr.DataAmount;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+
+import jakarta.persistence.*;
+import java.time.Duration;
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "AUTOSOORTEN")
+@Data
+@RequiredArgsConstructor
+@NoArgsConstructor(force=true)
 /**Verantwoordelijkheden van de abstracte klasse Autosoort*/
 public abstract class Autosoort {
+    @Id
     protected int id;
     protected String status = "Niet in bestelling";
     protected String naam;
@@ -13,19 +30,13 @@ public abstract class Autosoort {
     protected int huidigVoorraadniveau;
     protected int minimumpeiler;
     protected int maximumpeiler;
+    // One-to-many relationship with AnalyseMarktvraag
+    @OneToMany(mappedBy = "yourEntity", cascade = CascadeType.ALL, orphanRemoval = true)
     protected List<AnalyseMarktvraag> marktvraag = new ArrayList<AnalyseMarktvraag>();
+    // One-to-many relationship with Tip
+    @OneToMany(mappedBy = "yourEntity", cascade = CascadeType.ALL, orphanRemoval = true)
     protected List<Tip> tips = new ArrayList<Tip>();
     protected boolean verkooptSlecht = false;
-
-    public Autosoort() {}
-
-    public Autosoort(String naam, String merk, int huidigVoorraadniveau, int minimumpeiler, int maximumpeiler) {
-        this.naam = naam;
-        this.merk = merk;
-        this.huidigVoorraadniveau = huidigVoorraadniveau;
-        this.minimumpeiler = minimumpeiler;
-        this.maximumpeiler = maximumpeiler;
-    }
 
     public void registreerBestelling(int hoeveelheid) {
         /** Telt het geleverde aantal auto’s op bij het voorraadniveau voor die autosoort. */
