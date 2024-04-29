@@ -1,6 +1,4 @@
-package be.odisee.voorraadbeheer.domain;
-
-import jdk.jfr.DataAmount;
+package be.odisee.voorraadbeheer.domain.domain;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -12,8 +10,6 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 import jakarta.persistence.*;
-import java.time.Duration;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "AUTOSOORTEN")

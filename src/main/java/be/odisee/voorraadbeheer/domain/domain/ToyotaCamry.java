@@ -1,4 +1,6 @@
-package be.odisee.voorraadbeheer.domain;
+package be.odisee.voorraadbeheer.domain.domain;
+
+import be.odisee.voorraadbeheer.domain.domain.Autosoort;
 
 public class ToyotaCamry extends Autosoort {
     /**

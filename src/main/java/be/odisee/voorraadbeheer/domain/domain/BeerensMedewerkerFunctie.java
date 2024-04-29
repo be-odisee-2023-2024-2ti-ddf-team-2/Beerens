@@ -1,4 +1,4 @@
-package be.odisee.voorraadbeheer.domain;
+package be.odisee.voorraadbeheer.domain.domain;
 
 public enum BeerensMedewerkerFunctie {
     /**Verantwoordelijkheden van de klasse BeerensMedewerkerFunctie*/

@@ -1,4 +1,4 @@
-package be.odisee.voorraadbeheer.domain;
+package be.odisee.voorraadbeheer.domain.domain;
 
 import java.util.Date;
 
