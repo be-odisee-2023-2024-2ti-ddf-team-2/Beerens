@@ -1,7 +1,7 @@
 package be.odisee.voorraadbeheer.domain.service;
 
 import be.odisee.voorraadbeheer.domain.domain.Autosoort;
-import be.odisee.voorraadbeheer.domain.repo.AutosoortRepository;
+import be.odisee.voorraadbeheer.domain.dao.AutosoortRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

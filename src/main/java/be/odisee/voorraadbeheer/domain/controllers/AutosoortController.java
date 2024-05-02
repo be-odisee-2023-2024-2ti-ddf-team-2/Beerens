@@ -1,4 +1,4 @@
-package be.odisee.voorraadbeheer.domain.controller;
+package be.odisee.voorraadbeheer.domain.controllers;
 
 import be.odisee.voorraadbeheer.domain.domain.Autosoort;
 import org.springframework.beans.factory.annotation.Autowired;
