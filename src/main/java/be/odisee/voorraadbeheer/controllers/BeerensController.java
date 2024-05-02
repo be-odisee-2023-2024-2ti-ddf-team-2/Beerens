@@ -1,11 +1,12 @@
 package be.odisee.voorraadbeheer.controllers;
 
-import be.odisee.voorraadbeheer.formdata.EntryData;
+import be.odisee.voorraadbeheer.domain.Autosoort;
 
 import be.odisee.voorraadbeheer.service.BeerensService;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
+import java.util.List;
 
 @Slf4j
 @Controller
@@ -29,7 +31,7 @@ public class BeerensController {
     // HTTP Endpoints voor CRUD operaties
     @GetMapping
     public ResponseEntity<List<Autosoort>> getAllAutosoorten() {
-        List<Autosoort> autosoorten = autosoortService.findAllAutosoorten();
+        List<Autosoort> autosoorten = beerensService.findAllAutosoorten();
         return new ResponseEntity<>(autosoorten, HttpStatus.OK);
     }
 

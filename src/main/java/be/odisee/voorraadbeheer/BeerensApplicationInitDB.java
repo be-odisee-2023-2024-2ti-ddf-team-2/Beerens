@@ -42,10 +42,6 @@ public class BeerensApplicationInitDB implements CommandLineRunner {
         List<Category> categories = Arrays.asList(
                 new Category(1, "OVHD"),
                 new Category(2, "NETW"),
-                new Category(3, "PROSP"),
-                new Category(4, "FULF"),
-                new Category(5, "REND"),
-                new Category(6, "TRAVEL")
         );
 
         for (Category category : categories) {
@@ -55,15 +51,6 @@ public class BeerensApplicationInitDB implements CommandLineRunner {
         List<Project> projects = Arrays.asList(
                 new Project(1, "General", categoryRepository.findCategoryByName("OVHD")),
                 new Project(2, "Infrastructure", categoryRepository.findCategoryByName("OVHD") ),
-                new Project(3, "Jazzzolder", categoryRepository.findCategoryByName("NETW") ),
-                new Project(4, "Jazzathome", categoryRepository.findCategoryByName("NETW") ),
-                new Project(5, "Jazzcontest", categoryRepository.findCategoryByName("NETW") ),
-                new Project(6, "Odisee", categoryRepository.findCategoryByName("FULF") ),
-                new Project(7, "EMS", categoryRepository.findCategoryByName("FULF") ),
-                new Project(8, "Syntra-AB", categoryRepository.findCategoryByName("FULF") ),
-                new Project(9, "SBM", categoryRepository.findCategoryByName("FULF") ),
-                new Project(10, "Microservices", categoryRepository.findCategoryByName("REND") ),
-                new Project(11, "Odisee", categoryRepository.findCategoryByName("TRAVEL") )
         );
 
         for (Project project: projects) {
@@ -73,12 +60,6 @@ public class BeerensApplicationInitDB implements CommandLineRunner {
         List<Objective> objectives = Arrays.asList(
                 new Objective(1, "Omzet zelfstandig"),
                 new Objective(2, "Omzet digitaal"),
-                new Objective(3, "Digitale aanwezigheid"),
-                new Objective(4, "Talentdoelgroepen"),
-                new Objective(5, "Automatisering"),
-                new Objective(6, "Lean agile devops"),
-                new Objective(7, "DX in training"),
-                new Objective(8, "Training topics")
         );
 
         for (Objective objective: objectives) {
