@@ -1,13 +1,11 @@
 package be.odisee.voorraadbeheer.domain;
 
-import lombok.AccessLevel;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
-import jakarta.persistence.*;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Entity
