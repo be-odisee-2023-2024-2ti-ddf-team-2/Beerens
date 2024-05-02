@@ -22,7 +22,7 @@ public class BeerensServiceImpl implements BeerensService {
     }
 
     @Override
-    public Autosoort findAutosoortById(int id) {
+    public Optional<Autosoort> findAutosoortById(int id) {
         return autosoortRepository.findById(id);
     }
 

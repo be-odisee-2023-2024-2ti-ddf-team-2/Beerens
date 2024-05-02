@@ -31,6 +31,9 @@ public abstract class Autosoort {
     protected List<Tip> tips = new ArrayList<Tip>();
     protected boolean verkooptSlecht = false;
 
+    public Autosoort(String name, String merk, int huidigVoorraadniveau, int minimumpeiler, int maximumpeiler) {
+    }
+
     /*
     public void registreerBestelling(int hoeveelheid) {
         // Telt het geleverde aantal auto’s op bij het voorraadniveau voor die autosoort.

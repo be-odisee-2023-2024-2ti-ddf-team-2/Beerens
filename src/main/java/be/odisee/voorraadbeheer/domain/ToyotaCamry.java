@@ -2,20 +2,16 @@ package be.odisee.voorraadbeheer.domain;
 
 public class ToyotaCamry extends Autosoort {
     /**
-     * Verantwoordelijkheden van de klasse ToyotaCamry
-     * Erft over van Autosoort
-     * */
-    // Fields for name and merk are declared final
-    private final String name;
-    private final String merk;
+     * Responsibilities of the ToyotaCamry class
+     * Inherits from Autosoort
+     */
+    // Fields for name and merk are no longer final
+    private String name;
+    private String merk;
 
-    // Constructor initializes name and merk fields
+    // Constructor initializes name, merk, huidigVoorraadniveau, minimumpeiler, and maximumpeiler fields
     public ToyotaCamry(String name, String merk, int huidigVoorraadniveau, int minimumpeiler, int maximumpeiler) {
         super(name, merk, huidigVoorraadniveau, minimumpeiler, maximumpeiler);
-        this.name = name;
-        this.merk = merk;
-        this.huidigVoorraadniveau = huidigVoorraadniveau;
-        this.minimumpeiler = minimumpeiler;
-        this.maximumpeiler = maximumpeiler;
+        // Additional initialization specific to ToyotaCamry can be done here if needed
     }
 }
