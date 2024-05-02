@@ -1,11 +1,13 @@
 package be.odisee.voorraadbeheer;
 
-import be.odisee.voorraadbeheer.dao.CategoryRepository;
-import be.odisee.voorraadbeheer.dao.ObjectiveRepository;
-import be.odisee.voorraadbeheer.dao.ProjectRepository;
-import be.odisee.voorraadbeheer.domain.Category;
-import be.odisee.voorraadbeheer.domain.Objective;
-import be.odisee.voorraadbeheer.domain.Project;
+import be.odisee.voorraadbeheer.dao.AnalyseMarktvraagRepository;
+import be.odisee.voorraadbeheer.dao.AutosoortRepository;
+import be.odisee.voorraadbeheer.dao.BeerensMedewerkerRepository;
+import be.odisee.voorraadbeheer.domain.BestellingRepository;
+import be.odisee.voorraadbeheer.domain.FactuurRepository;
+import be.odisee.voorraadbeheer.domain.TipRepository;
+import be.odisee.voorraadbeheer.domain.VerkoopRepository;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

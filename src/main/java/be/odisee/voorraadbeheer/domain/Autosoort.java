@@ -33,19 +33,22 @@ public abstract class Autosoort {
     protected List<Tip> tips = new ArrayList<Tip>();
     protected boolean verkooptSlecht = false;
 
-    /**
+    /*
     public void registreerBestelling(int hoeveelheid) {
-        /** Telt het geleverde aantal auto’s op bij het voorraadniveau voor die autosoort. */
-        huidigVoorraadniveau = huidigVoorraadniveau + hoeveelheid;
+        // Telt het geleverde aantal auto’s op bij het voorraadniveau voor die autosoort.
+        //huidigVoorraadniveau = huidigVoorraadniveau + hoeveelheid;
     }
+    */
 
+    /*
     public Verkoop registreerVerkoop(Date verkoopdatum, Autosoort autosoort, Factuur factuur, BeerensMedewerker verkoper, int hoeveelheid) {
-        /** Maakt een nieuwe verkoop, past het voorraadniveau aan en zet de status op niet slecht verkopend. */
+        // Maakt een nieuwe verkoop, past het voorraadniveau aan en zet de status op niet slecht verkopend.
         Verkoop nieuweVerkoop = new Verkoop();
         this.verkooptSlecht = false;
         this.isVerkocht(hoeveelheid);
         return nieuweVerkoop;
     }
+    */
 
     public void isVerkocht(int hoeveelheid) {
         /**
@@ -53,7 +56,7 @@ public abstract class Autosoort {
          *
          * @param hoeveelheid De hoeveelheid verkochte auto's.
          * */
-        huidigVoorraadniveau = huidigVoorraadniveau - hoeveelheid;
+        //huidigVoorraadniveau = huidigVoorraadniveau - hoeveelheid;
     }
 
     public Tip voegTipToe(String tip) {
@@ -105,9 +108,9 @@ public abstract class Autosoort {
         status = "Niet in bestelling";
     }
 
+
     public void setVerkooptSlecht() {
         /** Duidt aan dat een autosoort slecht verkoopt */
         verkooptSlecht = true;
     }
-    **/
 }

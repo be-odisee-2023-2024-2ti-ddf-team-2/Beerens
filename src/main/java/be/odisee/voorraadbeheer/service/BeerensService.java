@@ -10,7 +10,6 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 
-
 public interface BeerensService {
 
     public Map<String, List<Project> > getCategoriesWithProjects();
