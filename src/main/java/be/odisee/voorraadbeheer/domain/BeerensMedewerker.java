@@ -1,4 +1,4 @@
-package be.odisee.voorraadbeheer.domain.domain;
+package be.odisee.voorraadbeheer.domain;
 
 public class BeerensMedewerker {
     /**Verantwoordelijkheden van de klasse BeerensMedewerker*/

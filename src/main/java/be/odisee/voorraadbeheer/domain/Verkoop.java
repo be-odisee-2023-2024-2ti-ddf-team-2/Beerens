@@ -1,8 +1,4 @@
-package be.odisee.voorraadbeheer.domain.domain;
-
-import be.odisee.voorraadbeheer.domain.domain.Autosoort;
-import be.odisee.voorraadbeheer.domain.domain.BeerensMedewerker;
-import be.odisee.voorraadbeheer.domain.domain.Factuur;
+package be.odisee.voorraadbeheer.domain;
 
 import java.util.Date;
 

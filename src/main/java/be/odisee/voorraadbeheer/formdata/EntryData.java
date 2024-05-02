@@ -1,4 +1,4 @@
-package be.odisee.voorraadbeheer.domain.formdata;
+package be.odisee.voorraadbeheer.formdata;
 
 import lombok.Data;
 

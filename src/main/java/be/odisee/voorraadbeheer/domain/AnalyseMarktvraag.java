@@ -1,4 +1,4 @@
-package be.odisee.voorraadbeheer.domain.domain;
+package be.odisee.voorraadbeheer.domain;
 
 import lombok.AccessLevel;
 import lombok.Data;

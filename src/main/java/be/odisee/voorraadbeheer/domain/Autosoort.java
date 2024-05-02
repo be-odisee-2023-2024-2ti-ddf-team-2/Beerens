@@ -1,8 +1,4 @@
-package be.odisee.voorraadbeheer.domain.domain;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+package be.odisee.voorraadbeheer.domain;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -10,6 +6,9 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "AUTOSOORTEN")
@@ -34,6 +33,7 @@ public abstract class Autosoort {
     protected List<Tip> tips = new ArrayList<Tip>();
     protected boolean verkooptSlecht = false;
 
+    /**
     public void registreerBestelling(int hoeveelheid) {
         /** Telt het geleverde aantal auto’s op bij het voorraadniveau voor die autosoort. */
         huidigVoorraadniveau = huidigVoorraadniveau + hoeveelheid;
@@ -109,4 +109,5 @@ public abstract class Autosoort {
         /** Duidt aan dat een autosoort slecht verkoopt */
         verkooptSlecht = true;
     }
+    **/
 }

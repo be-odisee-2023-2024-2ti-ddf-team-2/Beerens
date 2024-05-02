@@ -1,13 +1,11 @@
-package be.odisee.voorraadbeheer.domain.service;
+package be.odisee.voorraadbeheer;
 
-package be.odisee.ti2.se4.timesheet;
-
-import be.odisee.ti2.se4.timesheet.dao.CategoryRepository;
-import be.odisee.ti2.se4.timesheet.dao.ObjectiveRepository;
-import be.odisee.ti2.se4.timesheet.dao.ProjectRepository;
-import be.odisee.ti2.se4.timesheet.domain.Category;
-import be.odisee.ti2.se4.timesheet.domain.Objective;
-import be.odisee.ti2.se4.timesheet.domain.Project;
+import be.odisee.voorraadbeheer.dao.CategoryRepository;
+import be.odisee.voorraadbeheer.dao.ObjectiveRepository;
+import be.odisee.voorraadbeheer.dao.ProjectRepository;
+import be.odisee.voorraadbeheer.domain.Category;
+import be.odisee.voorraadbeheer.domain.Objective;
+import be.odisee.voorraadbeheer.domain.Project;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

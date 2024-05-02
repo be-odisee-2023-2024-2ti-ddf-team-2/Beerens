@@ -1,4 +1,4 @@
-package be.odisee.voorraadbeheer.domain;
+package be.odisee.voorraadbeheer;
 
 import be.odisee.ti2.se4.timesheet.controllers.HomeController;
 

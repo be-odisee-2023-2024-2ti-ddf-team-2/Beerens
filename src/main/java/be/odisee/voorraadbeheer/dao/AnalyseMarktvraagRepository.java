@@ -1,4 +1,4 @@
-package be.odisee.voorraadbeheer.domain.dao;
+package be.odisee.voorraadbeheer.dao;
 
 public interface AnalyseMarktvraagRepository {
 }
