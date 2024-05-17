@@ -5,13 +5,12 @@ import be.odisee.voorraadbeheer.formdata.EntryData;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 public interface BeerensService {
 
     Iterable<Autosoort> findAllAutosoorten();
 
-    Optional<Autosoort> findAutosoortById(int id);
+    Autosoort findAutosoortById(int id);
 
     Autosoort saveAutosoort(Autosoort autosoort);
 

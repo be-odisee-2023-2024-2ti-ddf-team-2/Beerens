@@ -1,7 +1,6 @@
 package be.odisee.voorraadbeheer;
 
-import be.odisee.ti2.se4.timesheet.controllers.HomeController;
-
+import be.odisee.voorraadbeheer.controllers.HomeController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

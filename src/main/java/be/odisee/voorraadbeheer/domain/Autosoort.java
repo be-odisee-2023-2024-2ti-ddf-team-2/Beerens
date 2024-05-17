@@ -114,4 +114,5 @@ public abstract class Autosoort {
         /** Duidt aan dat een autosoort slecht verkoopt */
         verkooptSlecht = true;
     }
+
 }
