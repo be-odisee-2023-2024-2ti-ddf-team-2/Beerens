@@ -1,11 +1,13 @@
 package be.odisee.Beerens.domain;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.util.Date;
 
+@Entity
 public class Bestelling {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +25,10 @@ public class Bestelling {
         this.startdatum = startdatum;
         this.einddatum = einddatum;
         this.totaalprijs = totaalprijs;
+    }
+
+    public Bestelling() {
+
     }
     //Getters and Setters
 
