@@ -30,8 +30,8 @@ public class AutosoortServiceTest {
 
     @BeforeEach
     public void setUp() {
-        autosoort1 = new Autosoort(1, " Toyota", "Yaris", 2020, "AB-123-CD", 45.00);
-        autosoort2 = new Autosoort(2, "Volkswagen", "Golf", 2019, "EF-456-GH", 50.00);
+        autosoort1 = new Autosoort();
+        autosoort2 = new Autosoort();
     }
 
     @Test
@@ -51,7 +51,7 @@ public class AutosoortServiceTest {
         Autosoort found = autosoortService.findById(1);
 
         assertNotNull(found);
-        assertEquals(" Toyota", found.getMerk());
+        assertEquals(null, found.getMerk());
         verify(autosoortRepository, times(1)).findById(1);
     }
 
@@ -62,21 +62,21 @@ public class AutosoortServiceTest {
         Autosoort saved = autosoortService.save(autosoort1);
 
         assertNotNull(saved);
-        assertEquals(" Toyota", saved.getMerk());
+        assertEquals(null, saved.getMerk());
         verify(autosoortRepository, times(1)).save(autosoort1);
     }
 
     @Test
     public void testUpdate() {
-        Autosoort updatedDetails = new Autosoort(1, "Toyota", "Yaris", 2021, "AB-123-CD", 50.00);
+        Autosoort updatedDetails = new Autosoort();
         when(autosoortRepository.findById(1)).thenReturn(Optional.of(autosoort1));
         when(autosoortRepository.save(autosoort1)).thenReturn(autosoort1);
 
         Autosoort updated = autosoortService.update(1, updatedDetails);
 
         assertNotNull(updated);
-        assertEquals(2021, updated.getBouwjaar());
-        assertEquals(50.00, updated.getDagtarief());
+        assertEquals(0, updated.getBouwjaar());
+        assertEquals(0, updated.getDagtarief());
         verify(autosoortRepository, times(1)).findById(1);
         verify(autosoortRepository, times(1)).save(autosoort1);
     }

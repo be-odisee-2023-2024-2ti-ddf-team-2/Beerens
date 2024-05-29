@@ -17,6 +17,9 @@ public class Autosoort {
     private String kenteken;
     private double dagtarief;
 
+    public Autosoort() {
+    }
+
     public Autosoort(int id, String merk, String model, int bouwjaar, String kenteken, double dagtarief) {
         this.id = id;
         this.merk = merk;
@@ -24,10 +27,6 @@ public class Autosoort {
         this.bouwjaar = bouwjaar;
         this.kenteken = kenteken;
         this.dagtarief = dagtarief;
-    }
-
-    public Autosoort() {
-
     }
 
     // Getters and Setters

@@ -1,15 +1,18 @@
 module org.example.beerens_autosoort {
-    requires javafx.controls;
-    requires javafx.fxml;
-    requires javafx.graphics;
-    requires spring.web;
-    requires spring.beans;
-    requires spring.data.jpa;
-    requires spring.context;
     requires spring.boot;
     requires spring.boot.autoconfigure;
+    requires spring.context;
+    requires spring.beans;
+    requires spring.core;
+    requires spring.web;
+    requires spring.data.jpa;
+    requires java.sql;
     requires jakarta.persistence;
 
-
-    opens org.example.beerens_autosoort to javafx.fxml;
+    // Open de pakketten voor reflectie door Spring
+    opens org.example.beerens_autosoort to spring.core, spring.beans, spring.context, spring.data.jpa;
+    opens org.example.beerens_autosoort.controller to spring.core, spring.beans, spring.context;
+    opens org.example.beerens_autosoort.dao to spring.core, spring.beans, spring.context;
+    opens org.example.beerens_autosoort.domain to spring.core, spring.beans, spring.context;
+    opens org.example.beerens_autosoort.service to spring.core, spring.beans, spring.context;
 }
