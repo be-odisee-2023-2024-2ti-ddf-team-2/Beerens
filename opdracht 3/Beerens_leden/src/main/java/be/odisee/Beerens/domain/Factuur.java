@@ -1,12 +1,44 @@
 package be.odisee.Beerens.domain;
 
+import jakarta.persistence.*;
+
 import java.util.Date;
+@Entity
+@Table(name = "facturen")
 public class Factuur {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
         private int id;
         private int bestellingId;
         private Date factuurdatum;
         private double bedrag;
         private boolean betaald;
+    // Existing fields...
+
+
+    // Existing constructor...
+    public Factuur(int id, Date factuurdatum, double bedrag, boolean betaald) {
+        // Initialization...
+    }
+
+    // New constructor...
+    public Factuur(String factuurdatumString, int bedrag) {
+        // Convert factuurdatumString to Date if needed...
+        this.factuurdatum = convertStringToDate(factuurdatumString);
+        this.bedrag = bedrag;
+    }
+
+    // Helper method to convert String to Date if needed...
+    private Date convertStringToDate(String dateString) {
+        // Logic to convert String to Date...
+        // For example:
+        // SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        // Date date = dateFormat.parse(dateString);
+        // return date;
+        // Please replace this example with your actual logic
+        return null;
+    }
+
 
         public Factuur(int id, int bestellingId, Date factuurdatum, double bedrag, boolean betaald) {
             this.id = id;
@@ -16,7 +48,11 @@ public class Factuur {
             this.betaald = betaald;
         }
 
-        // Getters and Setters
+    public Factuur() {
+
+    }
+
+    // Getters and Setters
 
         public int getId() {
             return id;

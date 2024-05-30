@@ -1,6 +1,7 @@
 package be.odisee.Beerens;
 
 import be.odisee.Beerens.dao.BestellingRepository;
+import be.odisee.Beerens.dao.FactuurRepository;
 import be.odisee.Beerens.domain.Bestelling;
 import be.odisee.Beerens.domain.Factuur;
 import org.springframework.boot.CommandLineRunner;
@@ -21,7 +22,7 @@ public class BeerensApplication {
         SpringApplication.run(BeerensApplication.class, args);
     }
     @Bean
-    CommandLineRunner init(BestellingRepository repo) {
+    CommandLineRunner init(BestellingRepository bestellingRepo, FactuurRepository factuurRepo) {
         return (args) -> {
             Calendar cal = Calendar.getInstance();
             Date today = cal.getTime();
@@ -32,9 +33,13 @@ public class BeerensApplication {
             cal.add(Calendar.MONTH, -1);
             Date tenMonthsFromNow = cal.getTime();
 
-            repo.save(new Bestelling(1,1,1, today, elevenMonthsFromNow, 450.0));
-            repo.save(new Bestelling(2,2,2, oneMonthAgo, tenMonthsFromNow, 300.0));
-            repo.save(new Bestelling(3,3,3, today, oneMonthAgo, 250.0));
+            bestellingRepo.save(new Bestelling(1, 1, 1, today, elevenMonthsFromNow, 450.0));
+            bestellingRepo.save(new Bestelling(2, 2, 2, oneMonthAgo, tenMonthsFromNow, 300.0));
+            bestellingRepo.save(new Bestelling(3, 3, 3, today, oneMonthAgo, 250.0));
+
+            factuurRepo.save(new Factuur("2024-05-30", 100));
+            factuurRepo.save(new Factuur("2024-05-31", 200));
+            factuurRepo.save(new Factuur("2024-06-01", 300));
         };
     }
 }
