@@ -2,6 +2,7 @@ package be.odisee.jzzz.domain;
 
 import java.util.Date;
 
+
 public class Car {
     private Long id;
     private String merk;

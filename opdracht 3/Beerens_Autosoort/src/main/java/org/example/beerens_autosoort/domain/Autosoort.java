@@ -1,11 +1,11 @@
 package org.example.beerens_autosoort.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import static javax.persistence.GenerationType.*;
 
 @Entity
+@Table(name="autosoorten")
 public class Autosoort {
 
     @Id
@@ -20,8 +20,7 @@ public class Autosoort {
     public Autosoort() {
     }
 
-    public Autosoort(int id, String merk, String model, int bouwjaar, String kenteken, double dagtarief) {
-        this.id = id;
+    public Autosoort(String merk, String model, int bouwjaar, String kenteken, double dagtarief) {
         this.merk = merk;
         this.model = model;
         this.bouwjaar = bouwjaar;
