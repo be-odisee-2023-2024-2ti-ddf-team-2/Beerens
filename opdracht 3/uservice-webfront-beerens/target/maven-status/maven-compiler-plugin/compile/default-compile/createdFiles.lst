@@ -1,0 +1,8 @@
+be\odisee\jzzz\domain\Car.class
+be\odisee\jzzz\service\CarServiceImpl.class
+be\odisee\jzzz\controller\CarController.class
+be\odisee\jzzz\service\CarService.class
+be\odisee\jzzz\helper\CarSummary.class
+be\odisee\jzzz\repository\CarRepository.class
+be\odisee\jzzz\CarManagementApplication.class
+be\odisee\jzzz\helper\CarFilter.class
