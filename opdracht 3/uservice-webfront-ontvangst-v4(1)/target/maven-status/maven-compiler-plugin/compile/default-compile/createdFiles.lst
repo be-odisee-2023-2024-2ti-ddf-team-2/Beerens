@@ -1,0 +1,10 @@
+be\odisee\jzzz\repository\AutosoortRepository.class
+be\odisee\jzzz\service\AutosoortService.class
+be\odisee\jzzz\domain\Autosoort.class
+be\odisee\jzzz\domain\Factuur.class
+be\odisee\jzzz\domain\Lid.class
+be\odisee\jzzz\helper\Keuze.class
+be\odisee\jzzz\controller\AutosoortController.class
+be\odisee\jzzz\JzzzWebfrontOntvangstApplication.class
+be\odisee\jzzz\helper\Aanwezigheid.class
+be\odisee\jzzz\service\AutosoortServiceImp.class

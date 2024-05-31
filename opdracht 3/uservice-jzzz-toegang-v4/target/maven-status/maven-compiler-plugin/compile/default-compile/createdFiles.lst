@@ -1,0 +1,4 @@
+be\odisee\jzzz\BeerensFactuurApplication.class
+be\odisee\jzzz\RepositoryConfig.class
+be\odisee\jzzz\domain\Factuur.class
+be\odisee\jzzz\dao\FactuurRepository.class

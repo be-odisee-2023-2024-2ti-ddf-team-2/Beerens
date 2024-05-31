@@ -1,0 +1,7 @@
+be\odisee\jzzz\JzzzLedenApplication.class
+be\odisee\jzzz\domain\Lid.class
+be\odisee\jzzz\controller\LidController.class
+be\odisee\jzzz\service\LidService.class
+be\odisee\jzzz\RepositoryConfig.class
+be\odisee\jzzz\dao\LidRepository.class
+be\odisee\jzzz\service\LidServiceImpl.class
