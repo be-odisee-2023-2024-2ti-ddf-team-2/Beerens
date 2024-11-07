@@ -1,0 +1,6 @@
+org\example\beerens_autosoort\controller\AutosoortController.class
+org\example\beerens_autosoort\service\AutosoortService.class
+module-info.class
+org\example\beerens_autosoort\domain\Autosoort.class
+org\example\beerens_autosoort\AutosoortApplication.class
+org\example\beerens_autosoort\dao\AutosoortRepository.class

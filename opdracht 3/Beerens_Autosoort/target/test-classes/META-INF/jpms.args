@@ -1,0 +1,4 @@
+--patch-module
+org.example.beerens_autosoort=_
+--add-reads
+org.example.beerens_autosoort=ALL-UNNAMED
